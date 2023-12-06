@@ -1,0 +1,15 @@
+[2023-12-04T10:00:15.360+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batch_load_bigquery.bigquery_load_data manual__2023-12-04T10:00:13.164277+00:00 [queued]>
+[2023-12-04T10:00:15.371+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batch_load_bigquery.bigquery_load_data manual__2023-12-04T10:00:13.164277+00:00 [queued]>
+[2023-12-04T10:00:15.372+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-04T10:00:15.387+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): bigquery_load_data> on 2023-12-04 10:00:13.164277+00:00
+[2023-12-04T10:00:15.397+0000] {standard_task_runner.py:57} INFO - Started process 2132 to run task
+[2023-12-04T10:00:15.402+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'batch_load_bigquery', 'bigquery_load_data', 'manual__2023-12-04T10:00:13.164277+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/dag_batch_load_bigquery.py', '--cfg-path', '/tmp/tmpomkxrwyg']
+[2023-12-04T10:00:15.404+0000] {standard_task_runner.py:85} INFO - Job 32: Subtask bigquery_load_data
+[2023-12-04T10:00:15.465+0000] {task_command.py:416} INFO - Running <TaskInstance: batch_load_bigquery.bigquery_load_data manual__2023-12-04T10:00:13.164277+00:00 [running]> on host c27f0049589f
+[2023-12-04T10:00:15.549+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batch_load_bigquery' AIRFLOW_CTX_TASK_ID='bigquery_load_data' AIRFLOW_CTX_EXECUTION_DATE='2023-12-04T10:00:13.164277+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-04T10:00:13.164277+00:00'
+[2023-12-04T10:00:17.213+0000] {logging_mixin.py:154} INFO - Created table ae-ts-assignment.staging.raw_subscriptions
+[2023-12-04T10:00:22.377+0000] {logging_mixin.py:154} INFO - LoadJob<project=ae-ts-assignment, location=US, id=f2347348-069f-4a6d-8fd7-dc598252fda4>
+[2023-12-04T10:00:22.378+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-12-04T10:00:22.390+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=batch_load_bigquery, task_id=bigquery_load_data, execution_date=20231204T100013, start_date=20231204T100015, end_date=20231204T100022
+[2023-12-04T10:00:22.426+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-04T10:00:22.445+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
